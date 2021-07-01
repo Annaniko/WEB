@@ -1,0 +1,73 @@
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>More</title>
+	<!-- Responsive starts here -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" href="/css/img/logo.jpg" type="image/x-icon">
+	<link rel="shortcut icon" href="/css/img/logo.jpg" type="image/x-icon"> 
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="nav">
+				<ul class="menu">
+					<li>
+						<p><a href="/index">
+							Home
+						</a></p>
+					</li>
+					<li>
+						<p><a href="/note">
+							Read More
+						</a></p>
+					</li>
+				</ul>
+				<button class="menu-open">
+					<img src="/css/img/menu.svg" alt="Open menu">
+				</button>
+			</div>
+			<div class="offer">
+				<h1>
+					Some breeds
+				</h1>
+			</div>
+		</div>
+	</header>
+	<section id="about" class="about">
+		<div class="container">
+            <h3>Edit</h3>
+			<p><a href="/create">Add</a></p>
+			<table class = "table">
+				<thead><th>Id</th><th>Breed</th><th>description</th><th></th></thead>
+				{{range . }}
+				<tr>
+					<td>{{.Id}}</td>
+					<td>{{.Breed}}</td>
+					<td>{{.Description}}</td>
+					<td><a href="/edit/{{.Id}}">Edit</a> |
+						<a href="/delete/{{.Id}}">Delete</a>
+					</td>
+				</tr>
+				{{end}}
+			</table>
+		</div>
+	</section>
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footer-text">
+				<p>
+					©2021
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="/css/js/main.js"></script>
+</body>
+</html>
